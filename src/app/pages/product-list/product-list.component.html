@@ -1,0 +1,10 @@
+<div class="filter-bar">
+  <button (click)="filterByCategory('All')" [class.active]="selectedCategory === 'All'">All</button>
+  <button (click)="filterByCategory('Men')" [class.active]="selectedCategory === 'Men'">Men</button>
+  <button (click)="filterByCategory('Women')" [class.active]="selectedCategory === 'Women'">Women</button>
+  <button (click)="filterByCategory('Kids')" [class.active]="selectedCategory === 'Kids'">Kids</button>
+</div>
+
+<div class="product-grid">
+  <app-product-card *ngFor="let product of filteredProducts" [product]="product"></app-product-card>
+</div>
